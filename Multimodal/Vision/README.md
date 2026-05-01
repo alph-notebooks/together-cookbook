@@ -1,6 +1,6 @@
-# Vision with Qwen3-VL
+# Vision with Qwen3.5
 
-Explore Qwen3-VL's vision-language capabilities using Together AI's API. From OCR to 3D grounding, these notebooks cover a wide range of visual understanding tasks. These notebooks are adapted from the original Qwen3 VL [repo](https://github.com/QwenLM/Qwen3-VL/tree/main).
+Explore Qwen3.5's vision-language capabilities using Together AI's API. From OCR to 3D grounding, these notebooks cover a wide range of visual understanding tasks. These notebooks are adapted from the original Qwen3-VL [repo](https://github.com/QwenLM/Qwen3-VL/tree/main).
 
 ## 📚 Notebooks
 
@@ -41,7 +41,7 @@ import together
 client = together.Together()
 
 response = client.chat.completions.create(
-    model="Qwen/Qwen3-VL-32B-Instruct",
+    model="Qwen/Qwen3.5-397B-A17B",
     messages=[{
         "role": "user",
         "content": [
@@ -55,7 +55,7 @@ print(response.choices[0].message.content)
 
 ## 📋 Prerequisites
 
-- Together AI API key ([get one here](https://api.together.xyz/settings/api-keys))
+- Together AI API key ([get one here](https://api.together.ai/settings/api-keys))
 - Python 3.8+
 - Additional dependencies per notebook (see each notebook for details)
 
@@ -63,4 +63,5 @@ print(response.choices[0].message.content)
 
 - [Together AI Documentation](https://docs.together.ai/intro)
 - [Together AI Vision Guide](https://docs.together.ai/docs/vision-overview)
-- [Qwen3-VL Model Card](https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct)
+- [Qwen3.5 397B Model Card](https://huggingface.co/Qwen/Qwen3.5-397B-A17B)
+- [Qwen3-VL Reference (original)](https://github.com/QwenLM/Qwen3-VL)

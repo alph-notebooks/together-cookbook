@@ -15,8 +15,8 @@ from together import Together
 client = Together(api_key=os.getenv("TOGETHER_API_KEY"))
 
 
-EMBEDDING_MODEL = "BAAI/bge-large-en-v1.5"
-RERANKER_MODEL = "Salesforce/Llama-Rank-V1"
+EMBEDDING_MODEL = "intfloat/multilingual-e5-large-instruct"
+RERANKER_MODEL = "mixedbread-ai/Mxbai-Rerank-Large-V2"
 FINAL_RESPONSE_MODEL = "deepseek-ai/DeepSeek-R1"
 data = {}
 
@@ -158,7 +158,7 @@ async def chat(request: ChatRequest) -> StreamingResponse:
     history = request.history or []
 
     vector_top_k = vector_retrieval(
-        query=query, model_api_string="BAAI/bge-large-en-v1.5"
+        query=query, model_api_string="intfloat/multilingual-e5-large-instruct"
     )
     bm25_top_k = bm25_retrieval(query=query)
 
